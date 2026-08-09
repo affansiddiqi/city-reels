@@ -20,7 +20,8 @@
     "result": "posted",
     "post_id": "18030889355658393",
     "posted_at_utc": "2026-08-09 18:08:52",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "baku-teens-03",
@@ -72,9 +73,9 @@
     "video": "videos/baku-it-guys-02.mp4",
     "scheduled_at": "2026-08-10 03:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
+    "result": "posted",
+    "post_id": "18113468488756622",
+    "posted_at_utc": "2026-08-09 23:28:21",
     "error": null
   },
   {
