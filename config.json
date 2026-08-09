@@ -3,5 +3,6 @@
   "redirect_uri": "http://localhost:8000/callback",
   "scopes": "instagram_basic,instagram_content_publish,pages_show_list,pages_read_engagement",
   "timezone": "Asia/Baku",
-  "max_per_run": 1
+  "max_per_run": 1,
+  "keep_posted_videos": 5
 }

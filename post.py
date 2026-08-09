@@ -38,6 +38,8 @@ QUEUE_PATH = os.path.join(HERE, "queue.json")
 PAGE_TOKEN = os.environ.get("IG_PAGE_ACCESS_TOKEN", "").strip()
 IG_ACCOUNT_ID = os.environ.get("IG_BUSINESS_ACCOUNT_ID", "").strip()
 MAX_PER_RUN = int(os.environ.get("MAX_PER_RUN", CONFIG.get("max_per_run", 1)))
+# How many already-posted videos to keep on disk before deleting the rest.
+KEEP_VIDEOS = int(os.environ.get("KEEP_VIDEOS", CONFIG.get("keep_posted_videos", 5)))
 
 PUBLIC_BASE = CONFIG["public_assets_base"].rstrip("/")
 TZNAME = CONFIG.get("timezone", "Asia/Karachi")
@@ -106,6 +108,42 @@ def publish(item):
         "creation_id": container_id, "access_token": PAGE_TOKEN})["id"]
 
 
+def cleanup_videos(queue):
+    """Delete the video files of reels that have already published.
+
+    Instagram downloads the file during publish, so once an item is posted its
+    video is dead weight. We keep the most recent KEEP_VIDEOS as a safety margin
+    (a failed publish can be retried) and delete everything older.
+
+    The caption and the script itself are never touched -- only the .mp4.
+
+    NOTE: this frees the working folder, not the git repository. Git retains
+    every committed file in its history, so this alone does not shrink the repo
+    on GitHub. See README, "Storage".
+    """
+    posted = [i for i in queue
+              if i.get("result") == "posted" and not i.get("video_deleted")]
+    posted.sort(key=lambda i: i.get("posted_at_utc") or "")
+    stale = posted[:-KEEP_VIDEOS] if KEEP_VIDEOS else posted
+
+    removed = 0
+    for item in stale:
+        path = os.path.join(HERE, item.get("video", ""))
+        if item.get("video") and os.path.exists(path):
+            try:
+                os.remove(path)
+                removed += 1
+            except OSError as e:
+                print("could not delete %s: %s" % (item["video"], e))
+                continue
+        item["video_deleted"] = True
+
+    if removed:
+        print("Cleaned up %d posted video(s); keeping the last %d."
+              % (removed, KEEP_VIDEOS))
+    return bool(stale)
+
+
 def main():
     if not PAGE_TOKEN or not IG_ACCOUNT_ID:
         print("Instagram credentials not set. Nothing to do.")
@@ -154,6 +192,9 @@ def main():
             print("::error::%s failed: %s" % (item.get("id"), e))
 
     if changed:
+        json.dump(queue, open(QUEUE_PATH, "w"), indent=2, ensure_ascii=False)
+
+    if cleanup_videos(queue):
         json.dump(queue, open(QUEUE_PATH, "w"), indent=2, ensure_ascii=False)
 
     pending = sum(1 for it in queue
