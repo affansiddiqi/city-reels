@@ -257,7 +257,8 @@ def derive_duration(title, body):
     return max(MIN_DURATION, min(MAX_DURATION, n / CHARS_PER_SEC + 4.0))
 
 
-def build(template, overlay_png, out_path, duration, scrim, mute):
+def build(template, overlay_png, out_path, duration, scrim, mute,
+          crf=25, maxrate="3000k", bufsize="6000k"):
     import imageio_ffmpeg
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
     has_audio = (not mute) and probe_has_audio(ffmpeg, template)
@@ -281,7 +282,11 @@ def build(template, overlay_png, out_path, duration, scrim, mute):
         "-filter_complex", filtergraph,
         "-map", "[v]", "-map", "2:a" if not has_audio else "0:a",
         "-t", str(duration),
-        "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+        # Phone footage arrives at 25+ Mbps. Instagram re-encodes everything on
+        # upload anyway, so capping the bitrate here costs no visible quality
+        # and keeps each reel to a size the repo and the API can handle.
+        "-c:v", "libx264", "-preset", "medium", "-crf", str(crf),
+        "-maxrate", maxrate, "-bufsize", bufsize,
         "-pix_fmt", "yuv420p", "-r", str(FPS),
         "-c:a", "aac", "-b:a", "128k", "-ar", "44100",
         "-movflags", "+faststart", "-shortest", out_path,
@@ -310,6 +315,9 @@ def main():
     ap.add_argument("--title-size", type=int, default=None)
     ap.add_argument("--body-size", type=int, default=None)
     ap.add_argument("--style", choices=["shadow", "stroke"], default="shadow")
+    ap.add_argument("--crf", type=int, default=25,
+                    help="quality: lower = better + bigger (18-28 sane)")
+    ap.add_argument("--maxrate", default="3000k", help="bitrate ceiling")
     args = ap.parse_args()
 
     if not os.path.exists(args.template):
@@ -328,7 +336,9 @@ def main():
         info = render_overlay(args.title, args.body, overlay_png, opts)
         if args.preview:
             shutil.copy(overlay_png, args.out + ".overlay.png")
-        build(args.template, overlay_png, args.out, duration, args.scrim, args.mute)
+        build(args.template, overlay_png, args.out, duration, args.scrim, args.mute,
+              crf=args.crf, maxrate=args.maxrate,
+              bufsize="%dk" % (int(args.maxrate.rstrip('k')) * 2))
         if args.preview:
             import imageio_ffmpeg
             subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-ss",
