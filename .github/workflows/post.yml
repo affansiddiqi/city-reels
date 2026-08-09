@@ -1,0 +1,45 @@
+name: Post Reel
+
+# Runs at the top of every hour. The script itself decides whether anything is
+# actually due, so an hourly schedule works whether you post 1 a day or 24.
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch: {}      # lets you trigger a run by hand from the Actions tab
+
+permissions:
+  contents: write            # needed to commit the updated queue.json back
+
+concurrency:
+  group: city-reels-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Publish anything that is due
+        env:
+          IG_PAGE_ACCESS_TOKEN: ${{ secrets.IG_PAGE_ACCESS_TOKEN }}
+          IG_BUSINESS_ACCOUNT_ID: ${{ secrets.IG_BUSINESS_ACCOUNT_ID }}
+          MAX_PER_RUN: "1"     # one per run; a backlog drips instead of dumping
+        run: python3 post.py
+
+      - name: Save what was posted
+        if: always()
+        run: |
+          if [[ -n "$(git status --porcelain queue.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add queue.json
+            git commit -m "chore: record posted reels [skip ci]"
+            git push
+          else
+            echo "Nothing posted this run."
+          fi

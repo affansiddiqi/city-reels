@@ -1,0 +1,9 @@
+# Private credentials - never commit these
+secrets.local.json
+tokens.json
+
+# Render byproducts
+*.overlay.png
+*.frame.png
+__pycache__/
+.DS_Store

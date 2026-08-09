@@ -1,0 +1,7 @@
+{
+  "public_assets_base": "https://raw.githubusercontent.com/affansiddiqi/city-reels/main",
+  "redirect_uri": "http://localhost:8000/callback",
+  "scopes": "instagram_basic,instagram_content_publish,pages_show_list,pages_read_engagement",
+  "timezone": "Asia/Karachi",
+  "max_per_run": 1
+}
