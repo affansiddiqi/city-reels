@@ -45,7 +45,8 @@ def main():
                     help="hours between posts (1 = hourly, 24 = once a day)")
     ap.add_argument("--scrim", type=float, default=0.35,
                     help="0-1 darkening of the footage so text reads")
-    ap.add_argument("--duration", type=float, default=None)
+    ap.add_argument("--duration", type=float, default=None,
+                    help="seconds per reel (default: render.py's 7s)")
     ap.add_argument("--mute", action="store_true")
     ap.add_argument("--no-queue", action="store_true",
                     help="render only, don't touch queue.json")

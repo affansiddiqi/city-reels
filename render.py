@@ -50,6 +50,11 @@ SHADOW_BLUR = 7
 SHADOW_ALPHA = 190
 STROKE_FILL = (0, 0, 0, 235)
 
+# Fixed short length by default. A long text block on a 7s reel is deliberate:
+# viewers cannot finish reading in one pass, so they replay or pause, which
+# pushes watch-time-over-length well above 100%. Pass --duration 0 to fall
+# back to a length derived from reading time instead.
+DEFAULT_DURATION = 7.0
 CHARS_PER_SEC = 26
 MIN_DURATION, MAX_DURATION = 12.0, 60.0
 
@@ -303,7 +308,9 @@ def main():
     ap.add_argument("--title", default="")
     ap.add_argument("--body", required=True)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--duration", type=float, default=None)
+    ap.add_argument("--duration", type=float, default=DEFAULT_DURATION,
+                    help="seconds (default %.0f; use 0 to derive from reading time)"
+                         % DEFAULT_DURATION)
     ap.add_argument("--scrim", type=float, default=0.35)
     ap.add_argument("--mute", action="store_true")
     ap.add_argument("--preview", action="store_true",
@@ -323,7 +330,7 @@ def main():
     if not os.path.exists(args.template):
         raise SystemExit("Template not found: %s" % args.template)
 
-    duration = args.duration or derive_duration(args.title, args.body)
+    duration = args.duration if args.duration else derive_duration(args.title, args.body)
     os.makedirs(os.path.dirname(os.path.abspath(args.out)) or ".", exist_ok=True)
     opts = {"title_top": args.title_top, "body_top": args.body_top,
             "body_end": args.body_end, "margin": args.margin,
