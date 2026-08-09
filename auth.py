@@ -141,17 +141,29 @@ def main():
             "None of your Pages [%s] has a linked Instagram Business account.\n"
             "Link it in the Instagram app first, then re-run this." % names)
 
-    if len(candidates) == 1:
+    print("\nInstagram accounts this login can post to:\n")
+    for c in candidates:
+        print("  @%-24s  (Page: %s)" % (c["ig_username"], c["page_name"]))
+    print()
+
+    want = None
+    for i, a in enumerate(sys.argv):
+        if a == "--account" and i + 1 < len(sys.argv):
+            want = sys.argv[i + 1].lstrip("@").lower()
+
+    if want:
+        match = [c for c in candidates if c["ig_username"].lower() == want]
+        if not match:
+            raise SystemExit("No account called @%s in the list above. "
+                             "Nothing was saved." % want)
+        chosen = match[0]
+    elif len(candidates) == 1:
         chosen = candidates[0]
     else:
-        print("\nSeveral Instagram accounts are available:\n")
-        for i, c in enumerate(candidates, 1):
-            print("  %d) @%s   (Page: %s)" % (i, c["ig_username"], c["page_name"]))
-        pick = input("\nWhich one is this project for? Enter a number: ").strip()
-        try:
-            chosen = candidates[int(pick) - 1]
-        except (ValueError, IndexError):
-            raise SystemExit("Not a valid choice. Nothing was saved.")
+        raise SystemExit(
+            "More than one account is available, so nothing was saved.\n"
+            "Re-run naming the one you want, e.g.:\n"
+            "    python3 auth.py --account mee.tpeople")
 
     chosen["expires_at"] = int(time.time()) + int(expires_in)
     json.dump(chosen, open(TOKENS_PATH, "w"), indent=2)
