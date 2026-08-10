@@ -116,7 +116,8 @@
     "result": "posted",
     "post_id": "18096154370126474",
     "posted_at_utc": "2026-08-10 05:24:10",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "baku-it-guys-06",
@@ -168,9 +169,9 @@
     "video": "videos/baku-it-girls-02.mp4",
     "scheduled_at": "2026-08-10 11:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
+    "result": "posted",
+    "post_id": "18111426901792298",
+    "posted_at_utc": "2026-08-10 14:23:47",
     "error": null
   },
   {
