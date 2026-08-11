@@ -368,7 +368,8 @@
     "result": "posted",
     "post_id": "18121229338853511",
     "posted_at_utc": "2026-08-11 10:52:57",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "baku-founders-05",
@@ -420,9 +421,9 @@
     "video": "videos/baku-marketing-02.mp4",
     "scheduled_at": "2026-08-11 08:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
+    "result": "posted",
+    "post_id": "18120907405888104",
+    "posted_at_utc": "2026-08-11 17:03:32",
     "error": null
   },
   {
