@@ -236,7 +236,8 @@
     "result": "posted",
     "post_id": "18089732204445673",
     "posted_at_utc": "2026-08-10 19:53:59",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "baku-cars-01",
@@ -288,9 +289,9 @@
     "video": "videos/baku-cars-05.mp4",
     "scheduled_at": "2026-08-10 21:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
+    "result": "posted",
+    "post_id": "18262525888314504",
+    "posted_at_utc": "2026-08-11 01:24:57",
     "error": null
   },
   {
