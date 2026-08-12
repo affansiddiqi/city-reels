@@ -440,7 +440,7 @@
     "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": "Instagram could not process the video: {'status_code': 'ERROR', 'status': 'Error: Media upload has failed with error code 2207082', 'id': '18079073558451523'}"
+    "error": "Instagram could not process the video: {'status_code': 'ERROR', 'status': 'Error: Media upload has failed with error code 2207082', 'id': '18079093943451523'}"
   },
   {
     "id": "baku-marketing-04",
@@ -475,7 +475,8 @@
     "result": "posted",
     "post_id": "17981123334113069",
     "posted_at_utc": "2026-08-11 21:43:14",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "baku-marketing-07",
@@ -527,9 +528,9 @@
     "video": "videos/baku-students-04.mp4",
     "scheduled_at": "2026-08-11 17:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
+    "result": "posted",
+    "post_id": "18010374374934989",
+    "posted_at_utc": "2026-08-12 06:12:44",
     "error": null
   },
   {
