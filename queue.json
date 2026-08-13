@@ -440,7 +440,7 @@
     "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": "Instagram could not process the video: {'status_code': 'ERROR', 'status': 'Error: Media upload has failed with error code 2207082', 'id': '18079544603451523'}"
+    "error": "Instagram could not process the video: {'status_code': 'ERROR', 'status': 'Error: Media upload has failed with error code 2207082', 'id': '18079558556451523'}"
   },
   {
     "id": "baku-marketing-04",
@@ -751,7 +751,8 @@
     "result": "posted",
     "post_id": "18109518560087234",
     "posted_at_utc": "2026-08-13 10:02:19",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "baku-gym-02",
@@ -803,9 +804,9 @@
     "video": "videos/baku-gym-06.mp4",
     "scheduled_at": "2026-08-12 16:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
+    "result": "posted",
+    "post_id": "18181311298412237",
+    "posted_at_utc": "2026-08-13 16:58:21",
     "error": null
   },
   {
