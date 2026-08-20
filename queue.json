@@ -1442,5 +1442,71 @@
     "post_id": null,
     "posted_at_utc": null,
     "error": null
+  },
+  {
+    "id": "isb-freelance-05",
+    "caption": "Tip #5 😭 the dollar rate is a personality trait.\n\n#islamabad #pakistan #freelancer #fiverr #upwork #freelancepakistan #remotework #relatable",
+    "video": "videos/isb-freelance-05.mp4",
+    "scheduled_at": "2026-08-23 09:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-freelance-06",
+    "caption": "Tip #6 😭 the dollar rate is a personality trait.\n\n#islamabad #pakistan #freelancer #fiverr #upwork #freelancepakistan #remotework #relatable",
+    "video": "videos/isb-freelance-06.mp4",
+    "scheduled_at": "2026-08-23 13:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-freelance-07",
+    "caption": "Tip #7 😭 the dollar rate is a personality trait.\n\n#islamabad #pakistan #freelancer #fiverr #upwork #freelancepakistan #remotework #relatable",
+    "video": "videos/isb-freelance-07.mp4",
+    "scheduled_at": "2026-08-23 17:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-gym-01",
+    "caption": "Tip #1 😭 Trail 5 walo, this is you.\n\n#islamabad #pakistan #gym #fitness #gympakistan #isb #relatable",
+    "video": "videos/isb-gym-01.mp4",
+    "scheduled_at": "2026-08-23 21:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-gym-02",
+    "caption": "Tip #2 😭 Trail 5 walo, this is you.\n\n#islamabad #pakistan #gym #fitness #gympakistan #isb #relatable",
+    "video": "videos/isb-gym-02.mp4",
+    "scheduled_at": "2026-08-24 01:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-gym-03",
+    "caption": "Tip #3 😭 Trail 5 walo, this is you.\n\n#islamabad #pakistan #gym #fitness #gympakistan #isb #relatable",
+    "video": "videos/isb-gym-03.mp4",
+    "scheduled_at": "2026-08-24 05:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
   }
 ]
