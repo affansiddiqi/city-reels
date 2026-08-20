@@ -1508,5 +1508,71 @@
     "post_id": null,
     "posted_at_utc": null,
     "error": null
+  },
+  {
+    "id": "isb-gym-04",
+    "caption": "Tip #4 😭 Trail 5 walo, this is you.\n\n#islamabad #pakistan #gym #fitness #gympakistan #isb #relatable",
+    "video": "videos/isb-gym-04.mp4",
+    "scheduled_at": "2026-08-24 09:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-gym-05",
+    "caption": "Tip #5 😭 Trail 5 walo, this is you.\n\n#islamabad #pakistan #gym #fitness #gympakistan #isb #relatable",
+    "video": "videos/isb-gym-05.mp4",
+    "scheduled_at": "2026-08-24 13:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-gym-06",
+    "caption": "Tip #6 😭 Trail 5 walo, this is you.\n\n#islamabad #pakistan #gym #fitness #gympakistan #isb #relatable",
+    "video": "videos/isb-gym-06.mp4",
+    "scheduled_at": "2026-08-24 17:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-gym-07",
+    "caption": "Tip #7 😭 Trail 5 walo, this is you.\n\n#islamabad #pakistan #gym #fitness #gympakistan #isb #relatable",
+    "video": "videos/isb-gym-07.mp4",
+    "scheduled_at": "2026-08-24 21:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-it-01",
+    "caption": "Tip #1 😭 I-9 walo, this is about you.\n\n#islamabad #pakistan #isb #techpakistan #developers #freelancepakistan #nust #relatable",
+    "video": "videos/isb-it-01.mp4",
+    "scheduled_at": "2026-08-25 01:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-it-02",
+    "caption": "Tip #2 😭 I-9 walo, this is about you.\n\n#islamabad #pakistan #isb #techpakistan #developers #freelancepakistan #nust #relatable",
+    "video": "videos/isb-it-02.mp4",
+    "scheduled_at": "2026-08-25 05:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
   }
 ]
