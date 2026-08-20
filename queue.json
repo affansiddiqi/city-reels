@@ -1232,7 +1232,8 @@
     "result": "posted",
     "post_id": "17961302643180554",
     "posted_at_utc": "2026-08-15 11:18:47",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "baku-abroad-07",
@@ -1275,10 +1276,11 @@
     "video": "videos/isb-css-03.mp4",
     "scheduled_at": "2026-08-20 17:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17952508317212416",
+    "posted_at_utc": "2026-08-20 13:45:41",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-css-04",
@@ -1901,6 +1903,72 @@
     "caption": "Tip #4 😭 NUST, QAU, FAST, COMSATS, you're all in here.\n\n#islamabad #pakistan #nust #quaidiazam #comsats #bahriauniversity #студент #student #relatable",
     "video": "videos/isb-students-04.mp4",
     "scheduled_at": "2026-08-30 05:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-students-05",
+    "caption": "Tip #5 😭 NUST, QAU, FAST, COMSATS, you're all in here.\n\n#islamabad #pakistan #nust #quaidiazam #comsats #bahriauniversity #студент #student #relatable",
+    "video": "videos/isb-students-05.mp4",
+    "scheduled_at": "2026-08-30 09:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-students-06",
+    "caption": "Tip #6 😭 NUST, QAU, FAST, COMSATS, you're all in here.\n\n#islamabad #pakistan #nust #quaidiazam #comsats #bahriauniversity #студент #student #relatable",
+    "video": "videos/isb-students-06.mp4",
+    "scheduled_at": "2026-08-30 13:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-students-07",
+    "caption": "Tip #7 😭 NUST, QAU, FAST, COMSATS, you're all in here.\n\n#islamabad #pakistan #nust #quaidiazam #comsats #bahriauniversity #студент #student #relatable",
+    "video": "videos/isb-students-07.mp4",
+    "scheduled_at": "2026-08-30 17:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-wedding-01",
+    "caption": "Tip #1 😭 shaadi season is a full-time job.\n\n#islamabad #pakistan #shaadi #desiwedding #weddingseason #mehndi #serena #relatable",
+    "video": "videos/isb-wedding-01.mp4",
+    "scheduled_at": "2026-08-30 21:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-wedding-02",
+    "caption": "Tip #2 😭 shaadi season is a full-time job.\n\n#islamabad #pakistan #shaadi #desiwedding #weddingseason #mehndi #serena #relatable",
+    "video": "videos/isb-wedding-02.mp4",
+    "scheduled_at": "2026-08-31 01:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-wedding-03",
+    "caption": "Tip #3 😭 shaadi season is a full-time job.\n\n#islamabad #pakistan #shaadi #desiwedding #weddingseason #mehndi #serena #relatable",
+    "video": "videos/isb-wedding-03.mp4",
+    "scheduled_at": "2026-08-31 05:00",
     "status": "approved",
     "result": null,
     "post_id": null,
