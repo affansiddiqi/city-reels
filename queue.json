@@ -1220,7 +1220,8 @@
     "result": "posted",
     "post_id": "17985204512858719",
     "posted_at_utc": "2026-08-15 10:20:58",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "baku-abroad-06",
@@ -1262,10 +1263,11 @@
     "video": "videos/isb-css-02.mp4",
     "scheduled_at": "2026-08-20 13:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18112702864971641",
+    "posted_at_utc": "2026-08-20 09:33:20",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-css-03",
@@ -1635,6 +1637,72 @@
     "caption": "Tip #1 😭 MDCAT survivors, I see you.\n\n#islamabad #pakistan #mdcat #medstudent #doctor #shifa #medical #relatable",
     "video": "videos/isb-med-01.mp4",
     "scheduled_at": "2026-08-26 05:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-med-02",
+    "caption": "Tip #2 😭 MDCAT survivors, I see you.\n\n#islamabad #pakistan #mdcat #medstudent #doctor #shifa #medical #relatable",
+    "video": "videos/isb-med-02.mp4",
+    "scheduled_at": "2026-08-26 09:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-med-03",
+    "caption": "Tip #3 😭 MDCAT survivors, I see you.\n\n#islamabad #pakistan #mdcat #medstudent #doctor #shifa #medical #relatable",
+    "video": "videos/isb-med-03.mp4",
+    "scheduled_at": "2026-08-26 13:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-med-04",
+    "caption": "Tip #4 😭 MDCAT survivors, I see you.\n\n#islamabad #pakistan #mdcat #medstudent #doctor #shifa #medical #relatable",
+    "video": "videos/isb-med-04.mp4",
+    "scheduled_at": "2026-08-26 17:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-med-05",
+    "caption": "Tip #5 😭 MDCAT survivors, I see you.\n\n#islamabad #pakistan #mdcat #medstudent #doctor #shifa #medical #relatable",
+    "video": "videos/isb-med-05.mp4",
+    "scheduled_at": "2026-08-26 21:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-med-06",
+    "caption": "Tip #6 😭 MDCAT survivors, I see you.\n\n#islamabad #pakistan #mdcat #medstudent #doctor #shifa #medical #relatable",
+    "video": "videos/isb-med-06.mp4",
+    "scheduled_at": "2026-08-27 01:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-med-07",
+    "caption": "Tip #7 😭 MDCAT survivors, I see you.\n\n#islamabad #pakistan #mdcat #medstudent #doctor #shifa #medical #relatable",
+    "video": "videos/isb-med-07.mp4",
+    "scheduled_at": "2026-08-27 05:00",
     "status": "approved",
     "result": null,
     "post_id": null,
