@@ -5,7 +5,7 @@
   "timezone": "Asia/Baku",
   "max_per_run": 1,
   "keep_posted_videos": 5,
-  "every_hours": 1,
+  "every_hours": 4,
   "max_new_per_run": 6,
   "scrim": 0.2,
   "template": "templates/Template.MP4",
