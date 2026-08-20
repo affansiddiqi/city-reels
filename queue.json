@@ -1308,5 +1308,71 @@
     "post_id": null,
     "posted_at_utc": null,
     "error": null
+  },
+  {
+    "id": "isb-cars-01",
+    "caption": "Tip #1 😭 plate se pata chal jata hai.\n\n#islamabad #pakistan #cars #corolla #civic #prado #isb #carsofpakistan #relatable",
+    "video": "videos/isb-cars-01.mp4",
+    "scheduled_at": "2026-08-21 09:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-cars-02",
+    "caption": "Tip #2 😭 plate se pata chal jata hai.\n\n#islamabad #pakistan #cars #corolla #civic #prado #isb #carsofpakistan #relatable",
+    "video": "videos/isb-cars-02.mp4",
+    "scheduled_at": "2026-08-21 13:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-cars-03",
+    "caption": "Tip #3 😭 plate se pata chal jata hai.\n\n#islamabad #pakistan #cars #corolla #civic #prado #isb #carsofpakistan #relatable",
+    "video": "videos/isb-cars-03.mp4",
+    "scheduled_at": "2026-08-21 17:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-cars-04",
+    "caption": "Tip #4 😭 plate se pata chal jata hai.\n\n#islamabad #pakistan #cars #corolla #civic #prado #isb #carsofpakistan #relatable",
+    "video": "videos/isb-cars-04.mp4",
+    "scheduled_at": "2026-08-21 21:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-cars-05",
+    "caption": "Tip #5 😭 plate se pata chal jata hai.\n\n#islamabad #pakistan #cars #corolla #civic #prado #isb #carsofpakistan #relatable",
+    "video": "videos/isb-cars-05.mp4",
+    "scheduled_at": "2026-08-22 01:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-cars-06",
+    "caption": "Tip #6 😭 plate se pata chal jata hai.\n\n#islamabad #pakistan #cars #corolla #civic #prado #isb #carsofpakistan #relatable",
+    "video": "videos/isb-cars-06.mp4",
+    "scheduled_at": "2026-08-22 05:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
   }
 ]
