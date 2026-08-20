@@ -1208,7 +1208,8 @@
     "result": "posted",
     "post_id": "17941043214320905",
     "posted_at_utc": "2026-08-15 09:23:46",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "baku-abroad-05",
@@ -1249,10 +1250,11 @@
     "video": "videos/isb-css-01.mp4",
     "scheduled_at": "2026-08-20 09:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18378856312229753",
+    "posted_at_utc": "2026-08-20 05:29:04",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-css-02",
@@ -1369,6 +1371,72 @@
     "caption": "Tip #6 😭 plate se pata chal jata hai.\n\n#islamabad #pakistan #cars #corolla #civic #prado #isb #carsofpakistan #relatable",
     "video": "videos/isb-cars-06.mp4",
     "scheduled_at": "2026-08-22 05:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-cars-07",
+    "caption": "Tip #7 😭 plate se pata chal jata hai.\n\n#islamabad #pakistan #cars #corolla #civic #prado #isb #carsofpakistan #relatable",
+    "video": "videos/isb-cars-07.mp4",
+    "scheduled_at": "2026-08-22 09:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-css-07",
+    "caption": "Tip #7 😭 CSS walo, respect, genuinely.\n\n#islamabad #pakistan #css #cssaspirants #fpsc #competitiveexam #isb #relatable",
+    "video": "videos/isb-css-07.mp4",
+    "scheduled_at": "2026-08-22 13:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-freelance-01",
+    "caption": "Tip #1 😭 the dollar rate is a personality trait.\n\n#islamabad #pakistan #freelancer #fiverr #upwork #freelancepakistan #remotework #relatable",
+    "video": "videos/isb-freelance-01.mp4",
+    "scheduled_at": "2026-08-22 17:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-freelance-02",
+    "caption": "Tip #2 😭 the dollar rate is a personality trait.\n\n#islamabad #pakistan #freelancer #fiverr #upwork #freelancepakistan #remotework #relatable",
+    "video": "videos/isb-freelance-02.mp4",
+    "scheduled_at": "2026-08-22 21:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-freelance-03",
+    "caption": "Tip #3 😭 the dollar rate is a personality trait.\n\n#islamabad #pakistan #freelancer #fiverr #upwork #freelancepakistan #remotework #relatable",
+    "video": "videos/isb-freelance-03.mp4",
+    "scheduled_at": "2026-08-23 01:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-freelance-04",
+    "caption": "Tip #4 😭 the dollar rate is a personality trait.\n\n#islamabad #pakistan #freelancer #fiverr #upwork #freelancepakistan #remotework #relatable",
+    "video": "videos/isb-freelance-04.mp4",
+    "scheduled_at": "2026-08-23 05:00",
     "status": "approved",
     "result": null,
     "post_id": null,
