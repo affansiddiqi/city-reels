@@ -441,7 +441,8 @@
     "post_id": "18113654143770861",
     "posted_at_utc": "2026-08-20 04:13:46",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "baku-marketing-04",
@@ -1301,10 +1302,11 @@
     "video": "videos/isb-css-05.mp4",
     "scheduled_at": "2026-08-21 01:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17877192531625399",
+    "posted_at_utc": "2026-08-20 21:25:11",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-css-06",
