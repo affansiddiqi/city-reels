@@ -66,12 +66,18 @@ EMOJI_FONT_CANDIDATES = [
 # Colour-emoji fonts are bitmap fonts and only load at specific pixel sizes.
 EMOJI_SIZES = [160, 109, 128, 96]
 
+# Order matters: the back catalogue was rendered in Arial Bold on macOS, and
+# Liberation Sans Bold is metric-compatible with Arial, so preferring it on
+# Linux keeps CI renders visually consistent with what is already posted.
+# DejaVu is only a last resort -- it is noticeably wider.
 FONT_CANDIDATES = [
-    "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
-    "/System/Library/Fonts/Supplemental/Helvetica.ttc",
+    "/System/Library/Fonts/Supplemental/Arial Bold.ttf",          # macOS
     "/Library/Fonts/Arial Bold.ttf",
-    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",   # Linux, Arial-metric
+    "/usr/share/fonts/liberation/LiberationSans-Bold.ttf",
+    "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",           # fallback
+    "/System/Library/Fonts/Supplemental/Helvetica.ttc",
 ]
 
 _EMOJI_RANGES = [
