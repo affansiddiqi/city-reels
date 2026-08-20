@@ -1574,5 +1574,71 @@
     "post_id": null,
     "posted_at_utc": null,
     "error": null
+  },
+  {
+    "id": "isb-it-03",
+    "caption": "Tip #3 😭 I-9 walo, this is about you.\n\n#islamabad #pakistan #isb #techpakistan #developers #freelancepakistan #nust #relatable",
+    "video": "videos/isb-it-03.mp4",
+    "scheduled_at": "2026-08-25 09:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-it-04",
+    "caption": "Tip #4 😭 I-9 walo, this is about you.\n\n#islamabad #pakistan #isb #techpakistan #developers #freelancepakistan #nust #relatable",
+    "video": "videos/isb-it-04.mp4",
+    "scheduled_at": "2026-08-25 13:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-it-05",
+    "caption": "Tip #5 😭 I-9 walo, this is about you.\n\n#islamabad #pakistan #isb #techpakistan #developers #freelancepakistan #nust #relatable",
+    "video": "videos/isb-it-05.mp4",
+    "scheduled_at": "2026-08-25 17:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-it-06",
+    "caption": "Tip #6 😭 I-9 walo, this is about you.\n\n#islamabad #pakistan #isb #techpakistan #developers #freelancepakistan #nust #relatable",
+    "video": "videos/isb-it-06.mp4",
+    "scheduled_at": "2026-08-25 21:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-it-07",
+    "caption": "Tip #7 😭 I-9 walo, this is about you.\n\n#islamabad #pakistan #isb #techpakistan #developers #freelancepakistan #nust #relatable",
+    "video": "videos/isb-it-07.mp4",
+    "scheduled_at": "2026-08-26 01:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
+  },
+  {
+    "id": "isb-med-01",
+    "caption": "Tip #1 😭 MDCAT survivors, I see you.\n\n#islamabad #pakistan #mdcat #medstudent #doctor #shifa #medical #relatable",
+    "video": "videos/isb-med-01.mp4",
+    "scheduled_at": "2026-08-26 05:00",
+    "status": "approved",
+    "result": null,
+    "post_id": null,
+    "posted_at_utc": null,
+    "error": null
   }
 ]
