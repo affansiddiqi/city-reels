@@ -1244,7 +1244,8 @@
     "result": "posted",
     "post_id": "18105640049139513",
     "posted_at_utc": "2026-08-15 12:31:52",
-    "error": null
+    "error": null,
+    "video_deleted": true
   },
   {
     "id": "isb-css-01",
@@ -1288,10 +1289,11 @@
     "video": "videos/isb-css-04.mp4",
     "scheduled_at": "2026-08-20 21:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18195637018344258",
+    "posted_at_utc": "2026-08-20 17:26:30",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-css-05",
