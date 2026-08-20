@@ -1,14 +1,14 @@
 name: Post Reel
 
-# Runs at the top of every hour. The script itself decides whether anything is
-# actually due, so an hourly schedule works whether you post 1 a day or 24.
+# Runs at the top of every hour. The scripts decide whether there is anything to
+# do, so an hourly schedule works whether you post once a day or once an hour.
 on:
   schedule:
     - cron: "0 * * * *"
-  workflow_dispatch: {}      # lets you trigger a run by hand from the Actions tab
+  workflow_dispatch: {}
 
 permissions:
-  contents: write            # needed to commit the updated queue.json back
+  contents: write
 
 concurrency:
   group: city-reels-post
@@ -17,6 +17,7 @@ concurrency:
 jobs:
   post:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -24,22 +25,39 @@ jobs:
         with:
           python-version: "3.11"
 
+      # render.py draws text with Pillow, so the runner needs a bold face and a
+      # colour-emoji face. Without these the reels render with missing glyphs.
+      - name: Install fonts and render deps
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-dejavu-core fonts-liberation fonts-noto-color-emoji
+          python3 -m pip install --quiet --upgrade pillow imageio-ffmpeg
+
+      # Renders any script that has no video yet and schedules it, approved.
+      # This is what keeps the account running without anyone approving a batch.
+      - name: Top up the queue
+        env:
+          EVERY_HOURS: "1"
+          MAX_NEW_PER_RUN: "6"
+        run: python3 replenish.py
+
       - name: Publish anything that is due
         env:
           IG_PAGE_ACCESS_TOKEN: ${{ secrets.IG_PAGE_ACCESS_TOKEN }}
           IG_BUSINESS_ACCOUNT_ID: ${{ secrets.IG_BUSINESS_ACCOUNT_ID }}
-          MAX_PER_RUN: "1"     # one per run; a backlog drips instead of dumping
+          MAX_PER_RUN: "1"
         run: python3 post.py
 
-      - name: Save what was posted
+      - name: Save queue and videos
         if: always()
         run: |
-          if [[ -n "$(git status --porcelain queue.json videos)" ]]; then
+          if [[ -n "$(git status --porcelain queue.json videos content)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A queue.json videos
-            git commit -m "chore: record posted reels, drop spent videos [skip ci]"
+            git add -A queue.json videos content
+            git commit -m "chore: top up queue, record posts, drop spent videos [skip ci]"
+            git pull --rebase -q origin main || true
             git push
           else
-            echo "Nothing posted this run."
+            echo "Nothing changed this run."
           fi

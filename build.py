@@ -30,6 +30,24 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+MIN_VALID_BYTES = 100_000   # a real 7s reel is ~3MB; anything tiny is a dead render
+
+
+def is_valid_video(path):
+    """A render that was interrupted leaves a truncated file behind. Treating
+    that as 'already done' silently poisons the queue, so check the size and
+    that the MP4 actually has its moov atom before trusting it."""
+    if not os.path.exists(path) or os.path.getsize(path) < MIN_VALID_BYTES:
+        return False
+    try:
+        import imageio_ffmpeg
+        r = subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-v", "error",
+                            "-i", path, "-f", "null", "-"],
+                           capture_output=True, text=True, timeout=60)
+        return r.returncode == 0
+    except Exception:
+        return False
+
 QUEUE_PATH = os.path.join(HERE, "queue.json")
 RENDER = os.path.join(HERE, "render.py")
 VIDEOS_DIR = os.path.join(HERE, "videos")
@@ -77,7 +95,7 @@ def main():
         name = "%s.mp4" % tip["id"]
         out_path = os.path.join(VIDEOS_DIR, name)
 
-        if os.path.exists(out_path) and not args.force:
+        if is_valid_video(out_path) and not args.force:
             print("exists, skipping render: %s" % name)
             skipped += 1
         else:

@@ -38,6 +38,9 @@ QUEUE_PATH = os.path.join(HERE, "queue.json")
 PAGE_TOKEN = os.environ.get("IG_PAGE_ACCESS_TOKEN", "").strip()
 IG_ACCOUNT_ID = os.environ.get("IG_BUSINESS_ACCOUNT_ID", "").strip()
 MAX_PER_RUN = int(os.environ.get("MAX_PER_RUN", CONFIG.get("max_per_run", 1)))
+# A reel Instagram refuses to transcode will fail identically forever. Retire
+# it after a few tries so it stops consuming every run's single publish slot.
+MAX_ATTEMPTS = int(os.environ.get("MAX_ATTEMPTS", CONFIG.get("max_attempts", 3)))
 # How many already-posted videos to keep on disk before deleting the rest.
 KEEP_VIDEOS = int(os.environ.get("KEEP_VIDEOS", CONFIG.get("keep_posted_videos", 5)))
 
@@ -164,12 +167,15 @@ def main():
             continue
         if item.get("result") == "posted":
             continue
+        if item.get("attempts", 0) >= MAX_ATTEMPTS:
+            continue
         if not is_due(item):
             continue
         if not item.get("video"):
             skipped += 1
             continue
 
+        item["attempts"] = item.get("attempts", 0) + 1
         try:
             media_id = publish(item)
             item.update({"result": "posted", "post_id": media_id,
@@ -182,6 +188,9 @@ def main():
             body = e.read().decode(errors="replace")
             item.update({"result": "failed",
                          "error": "HTTP %s: %s" % (e.code, body[:500])})
+            if item["attempts"] >= MAX_ATTEMPTS:
+                print("::warning::%s gave up after %d attempts"
+                      % (item.get("id"), item["attempts"]))
             changed = True
             print("::error::%s failed: HTTP %s %s" % (item.get("id"), e.code, body[:300]))
             if e.code in (190, 400, 401, 403):
@@ -189,7 +198,8 @@ def main():
         except Exception as e:  # noqa: BLE001
             item.update({"result": "failed", "error": str(e)})
             changed = True
-            print("::error::%s failed: %s" % (item.get("id"), e))
+            print("::error::%s failed (attempt %d/%d): %s"
+                  % (item.get("id"), item["attempts"], MAX_ATTEMPTS, e))
 
     if changed:
         json.dump(queue, open(QUEUE_PATH, "w"), indent=2, ensure_ascii=False)

@@ -4,5 +4,10 @@
   "scopes": "instagram_basic,instagram_content_publish,pages_show_list,pages_read_engagement",
   "timezone": "Asia/Baku",
   "max_per_run": 1,
-  "keep_posted_videos": 5
+  "keep_posted_videos": 5,
+  "every_hours": 1,
+  "max_new_per_run": 6,
+  "scrim": 0.2,
+  "template": "templates/Template.MP4",
+  "max_attempts": 3
 }

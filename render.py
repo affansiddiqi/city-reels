@@ -58,8 +58,13 @@ DEFAULT_DURATION = 7.0
 CHARS_PER_SEC = 26
 MIN_DURATION, MAX_DURATION = 12.0, 60.0
 
-EMOJI_FONT = "/System/Library/Fonts/Apple Color Emoji.ttc"
-EMOJI_NATIVE = 160          # the only size Apple Color Emoji loads cleanly
+EMOJI_FONT_CANDIDATES = [
+    "/System/Library/Fonts/Apple Color Emoji.ttc",          # macOS
+    "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",    # Ubuntu runners
+    "/usr/share/fonts/truetype/noto/NotoColorEmoji-Regular.ttf",
+]
+# Colour-emoji fonts are bitmap fonts and only load at specific pixel sizes.
+EMOJI_SIZES = [160, 109, 128, 96]
 
 FONT_CANDIDATES = [
     "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
@@ -94,11 +99,24 @@ def font(size):
 
 
 def emoji_font():
+    """Load whichever colour-emoji font this machine has, at a size it accepts.
+
+    Returns None when there is no colour-emoji font at all -- callers then skip
+    the glyph rather than drawing a tofu box.
+    """
     if "f" not in _emoji_cache:
-        try:
-            _emoji_cache["f"] = ImageFont.truetype(EMOJI_FONT, EMOJI_NATIVE)
-        except Exception:
-            _emoji_cache["f"] = None
+        _emoji_cache["f"] = None
+        for path in EMOJI_FONT_CANDIDATES:
+            if not os.path.exists(path):
+                continue
+            for size in EMOJI_SIZES:
+                try:
+                    _emoji_cache["f"] = ImageFont.truetype(path, size)
+                    break
+                except Exception:
+                    continue
+            if _emoji_cache["f"] is not None:
+                break
     return _emoji_cache["f"]
 
 
@@ -149,7 +167,7 @@ def draw_mixed(img, draw, x, y, text, f, stroke_w, stroke_fill):
         else:
             box = int(f.size * 1.20)
             if ef is not None:
-                tile = Image.new("RGBA", (EMOJI_NATIVE * 2, EMOJI_NATIVE * 2), (0, 0, 0, 0))
+                tile = Image.new("RGBA", (ef.size * 2, ef.size * 2), (0, 0, 0, 0))
                 ImageDraw.Draw(tile).text((0, 0), run, font=ef, embedded_color=True)
                 tile = tile.crop(tile.getbbox() or (0, 0, 1, 1))
                 tile = tile.resize((box, max(1, int(box * tile.height / tile.width))),
