@@ -1271,7 +1271,8 @@
     "post_id": "18112702864971641",
     "posted_at_utc": "2026-08-20 09:33:20",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-css-03",
@@ -1327,10 +1328,11 @@
     "video": "videos/isb-cars-01.mp4",
     "scheduled_at": "2026-08-21 09:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17945498082270424",
+    "posted_at_utc": "2026-08-21 05:29:58",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-cars-02",
