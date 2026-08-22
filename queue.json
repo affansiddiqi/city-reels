@@ -1375,7 +1375,8 @@
     "post_id": "18071488151459337",
     "posted_at_utc": "2026-08-21 17:26:08",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-cars-05",
@@ -1431,10 +1432,11 @@
     "video": "videos/isb-freelance-01.mp4",
     "scheduled_at": "2026-08-22 17:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18128990134664605",
+    "posted_at_utc": "2026-08-22 13:29:22",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-freelance-02",
