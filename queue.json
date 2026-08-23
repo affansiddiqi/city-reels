@@ -1440,7 +1440,8 @@
     "post_id": "18128990134664605",
     "posted_at_utc": "2026-08-22 13:29:22",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-freelance-02",
@@ -1496,10 +1497,11 @@
     "video": "videos/isb-freelance-06.mp4",
     "scheduled_at": "2026-08-23 13:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18558396049074707",
+    "posted_at_utc": "2026-08-23 09:24:58",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-freelance-07",
