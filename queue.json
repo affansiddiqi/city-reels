@@ -1479,7 +1479,8 @@
     "post_id": "18216098482353173",
     "posted_at_utc": "2026-08-23 01:08:04",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-freelance-05",
@@ -1535,10 +1536,11 @@
     "video": "videos/isb-gym-02.mp4",
     "scheduled_at": "2026-08-24 01:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18173881744443604",
+    "posted_at_utc": "2026-08-23 21:19:00",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-gym-03",
