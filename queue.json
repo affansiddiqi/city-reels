@@ -1687,7 +1687,8 @@
     "post_id": "18119307059475857",
     "posted_at_utc": "2026-08-25 17:29:50",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-it-07",
@@ -1743,10 +1744,11 @@
     "video": "videos/isb-med-04.mp4",
     "scheduled_at": "2026-08-26 17:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18111960277817954",
+    "posted_at_utc": "2026-08-26 13:54:02",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-med-05",
