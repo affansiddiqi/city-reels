@@ -1804,7 +1804,8 @@
     "post_id": "18161941906484429",
     "posted_at_utc": "2026-08-27 13:44:05",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-spouse-02",
@@ -1860,10 +1861,11 @@
     "video": "videos/isb-spouse-06.mp4",
     "scheduled_at": "2026-08-28 05:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18007962722964090",
+    "posted_at_utc": "2026-08-29 10:45:10",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-spouse-07",
