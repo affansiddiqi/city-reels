@@ -1869,7 +1869,8 @@
     "post_id": "18007962722964090",
     "posted_at_utc": "2026-08-29 10:45:10",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-spouse-07",
@@ -1925,10 +1926,11 @@
     "video": "videos/isb-rishta-04.mp4",
     "scheduled_at": "2026-08-29 01:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18111698657093589",
+    "posted_at_utc": "2026-08-30 07:50:10",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-rishta-05",
