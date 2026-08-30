@@ -1908,7 +1908,8 @@
     "post_id": "18113587720770837",
     "posted_at_utc": "2026-08-29 22:19:49",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-rishta-03",
@@ -1964,10 +1965,11 @@
     "video": "videos/isb-rishta-07.mp4",
     "scheduled_at": "2026-08-29 13:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17981264466078927",
+    "posted_at_utc": "2026-08-30 20:31:22",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-students-01",
