@@ -1999,7 +1999,8 @@
     "post_id": "18074204072418899",
     "posted_at_utc": "2026-08-31 03:28:49",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-students-03",
@@ -2055,10 +2056,11 @@
     "video": "videos/isb-students-07.mp4",
     "scheduled_at": "2026-08-30 17:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17924205219420737",
+    "posted_at_utc": "2026-09-01 07:13:40",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-wedding-01",
