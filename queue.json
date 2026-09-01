@@ -2038,7 +2038,8 @@
     "post_id": "18083718512308356",
     "posted_at_utc": "2026-08-31 22:25:04",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-students-06",
@@ -2094,10 +2095,11 @@
     "video": "videos/isb-wedding-03.mp4",
     "scheduled_at": "2026-08-31 05:00",
     "status": "approved",
-    "result": null,
+    "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": null
+    "error": "Instagram could not process the video: {'status_code': 'ERROR', 'status': 'Error: Media upload has failed with error code 2207082', 'id': '18084556697451523'}",
+    "attempts": 1
   },
   {
     "id": "isb-wedding-04",
@@ -2105,10 +2107,11 @@
     "video": "videos/isb-wedding-04.mp4",
     "scheduled_at": "2026-08-31 09:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17911766934455742",
+    "posted_at_utc": "2026-09-01 20:31:40",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-wedding-05",
