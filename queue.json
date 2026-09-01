@@ -1986,7 +1986,8 @@
     "post_id": "18147838147542842",
     "posted_at_utc": "2026-08-30 23:08:39",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-students-02",
@@ -2042,10 +2043,11 @@
     "video": "videos/isb-students-06.mp4",
     "scheduled_at": "2026-08-30 13:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18135307570624772",
+    "posted_at_utc": "2026-09-01 01:37:20",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-students-07",
