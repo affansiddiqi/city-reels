@@ -2077,7 +2077,8 @@
     "post_id": "18351783226220559",
     "posted_at_utc": "2026-09-01 13:03:36",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-wedding-02",
@@ -2133,10 +2134,11 @@
     "video": "videos/isb-wedding-06.mp4",
     "scheduled_at": "2026-08-31 17:00",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18119833930930418",
+    "posted_at_utc": "2026-09-02 05:29:46",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-wedding-07",
