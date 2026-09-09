@@ -2159,11 +2159,11 @@
     "video": "videos/isb-kids-01.mp4",
     "scheduled_at": "2026-09-09 18:50",
     "status": "approved",
-    "result": "failed",
+    "result": null,
     "post_id": null,
     "posted_at_utc": null,
-    "error": "Instagram could not process the video: {'status_code': 'ERROR', 'status': 'Error: Media upload has failed with error code 2207076', 'id': '18086173037451523'}",
-    "attempts": 1
+    "error": null,
+    "attempts": 0
   },
   {
     "id": "isb-kids-02",

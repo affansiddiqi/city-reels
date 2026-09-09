@@ -1,7 +1,5 @@
 name: Post Reel
 
-# Runs at the top of every hour. The scripts decide whether there is anything to
-# do, so an hourly schedule works whether you post once a day or once an hour.
 on:
   schedule:
     - cron: "0 * * * *"
@@ -34,12 +32,27 @@ jobs:
           python3 -m pip install --quiet --upgrade pillow imageio-ffmpeg
 
       # Renders any script that has no video yet and schedules it, approved.
-      # This is what keeps the account running without anyone approving a batch.
       - name: Top up the queue
         env:
           EVERY_HOURS: "8"
           MAX_NEW_PER_RUN: "8"
         run: python3 replenish.py
+
+      # CRITICAL: this must happen BEFORE publishing. Instagram fetches the video
+      # over a public raw.githubusercontent URL, so a freshly rendered file has to
+      # be pushed first or the fetch 404s and the reel fails to process.
+      - name: Publish new videos to the CDN
+        run: |
+          if [[ -n "$(git status --porcelain queue.json videos content)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A queue.json videos content
+            git commit -m "chore: render and queue new reels [skip ci]"
+            git pull --rebase -q origin main || true
+            git push
+          else
+            echo "No new videos this run."
+          fi
 
       - name: Publish anything that is due
         env:
@@ -48,16 +61,16 @@ jobs:
           MAX_PER_RUN: "1"
         run: python3 post.py
 
-      - name: Save queue and videos
+      - name: Record what was posted
         if: always()
         run: |
-          if [[ -n "$(git status --porcelain queue.json videos content)" ]]; then
+          if [[ -n "$(git status --porcelain queue.json videos)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A queue.json videos content
-            git commit -m "chore: top up queue, record posts, drop spent videos [skip ci]"
+            git add -A queue.json videos
+            git commit -m "chore: record posts, drop spent videos [skip ci]"
             git pull --rebase -q origin main || true
             git push
           else
-            echo "Nothing changed this run."
+            echo "Nothing posted this run."
           fi

@@ -82,6 +82,18 @@ def get_json(url, params):
         return json.load(resp)
 
 
+def video_is_reachable(url):
+    """Instagram downloads the file itself, so a video that has not reached the
+    CDN yet fails with an opaque processing error. Check first and skip instead,
+    rather than burning a retry on a file that simply is not published yet."""
+    req = urllib.request.Request(url, method="HEAD")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
 def publish(item):
     """Create a Reel container, wait for Instagram to transcode it, publish."""
     video_url = PUBLIC_BASE + "/" + item["video"].lstrip("/")
@@ -172,6 +184,10 @@ def main():
         if not is_due(item):
             continue
         if not item.get("video"):
+            skipped += 1
+            continue
+        if not video_is_reachable(PUBLIC_BASE + "/" + item["video"].lstrip("/")):
+            print("not on the CDN yet, leaving queued: %s" % item.get("id"))
             skipped += 1
             continue
 
