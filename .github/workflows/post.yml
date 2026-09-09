@@ -37,8 +37,8 @@ jobs:
       # This is what keeps the account running without anyone approving a batch.
       - name: Top up the queue
         env:
-          EVERY_HOURS: "4"
-          MAX_NEW_PER_RUN: "6"
+          EVERY_HOURS: "8"
+          MAX_NEW_PER_RUN: "8"
         run: python3 replenish.py
 
       - name: Publish anything that is due
