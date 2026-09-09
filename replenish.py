@@ -60,8 +60,26 @@ def is_valid_video(path):
         return False
 
 
+# Strongest-performing formats first, so a restart leads with proven content
+# instead of whatever happens to sort first alphabetically. Anything not listed
+# runs afterwards in alphabetical order.
+PRIORITY = [
+    "islamabad_rich_kids", "lahore_rich_spouse", "karachi_rich_spouse",
+    "dubai_rich_spouse", "london_rich_spouse",
+    "lahore_rich_kids", "karachi_rich_kids", "dubai_rich_kids",
+    "london_rich_kids", "islamabad_invisible_money",
+    "islamabad_old_vs_new", "lahore_old_vs_new", "karachi_old_vs_new",
+    "dubai_real_vs_fake", "london_generations",
+    "lahore_begums", "karachi_begums", "islamabad_begums",
+    "dubai_aunties", "london_aunties",
+]
+
+
 def content_files():
-    return sorted(f for f in os.listdir(CONTENT_DIR) if f.endswith(".json"))
+    """Priority files first, then everything else alphabetically."""
+    have = {f for f in os.listdir(CONTENT_DIR) if f.endswith(".json")}
+    ordered = [n + ".json" for n in PRIORITY if n + ".json" in have]
+    return ordered + sorted(have - set(ordered))
 
 
 def render(tip, out_path):
@@ -94,7 +112,9 @@ def main():
     # Continue from the last scheduled slot, or from the next whole hour if the
     # queue has fully drained.
     slots = [i["scheduled_at"] for i in queue if i.get("scheduled_at")]
-    nxt = now_local().replace(minute=0, second=0, microsecond=0) + datetime.timedelta(hours=1)
+    # If the queue has fully drained, start immediately rather than waiting for
+    # the next whole hour -- a restart after a silence should not add more silence.
+    nxt = now_local() - datetime.timedelta(minutes=5)
     if slots:
         try:
             last = datetime.datetime.strptime(max(slots), "%Y-%m-%d %H:%M")
