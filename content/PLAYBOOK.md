@@ -294,3 +294,48 @@ Run one persona to exhaustion (4–6 tips) before switching. The series format i
 what makes people follow — a single reel gets a view, a series gets a follower.
 Post the whole persona, then move to the next one in the same city. Only move
 cities once the current one is mined out.
+
+---
+
+## What the data actually says (updated 9 Sept 2026)
+
+After 174 posted reels: **471 followers, 2,758 likes — and 3 reels produced 80%
+of all engagement.** Volume is not the lever. Format is.
+
+| Persona | Avg likes |
+|---|---|
+| Islamabad rich spouse | 260 |
+| Baku rich teens | 106 |
+| Islamabad students / IT / CSS | ~10 |
+| Baku professional niches | 1–4 |
+| Baku cabin crew | 0 |
+
+**This reverses the earlier "more niche is better" advice on this page.** Broad
+aspirational class content wins. Hyper-specific professional personas die.
+Islamabad and Pakistani cities massively outperform Baku — the audience that
+actually assembled is Pakistani.
+
+### The winning formula, reverse-engineered from isb-spouse-01 (1,375 likes)
+
+1. **Open with an instruction to the viewer.** "Get into LUMS, or…" Second
+   person, imperative. Not "he works at…".
+2. **Four to six pieces of quoted speech.** `"Papa's in construction,"` `"our
+   driver is already downstairs."` This is the engine. People tag friends when
+   they *hear* someone they recognise, not when they read a description.
+3. **Named real places, densely.** Centaurus, Kohsar, F-7/2, Tayyabs, Khadda
+   Market, Ravi in Satwa. Six-plus proper nouns minimum.
+4. **Escalate:** getting warmer → extremely warm → "It's a sealed deal if…"
+5. **Close on a named place or a specific behaviour**, never on an abstraction.
+6. **Keep it 320–560 characters.** The winner was 560. Shorter renders larger
+   on screen and reads in one pass.
+
+### The trap to avoid
+
+Essayistic observation. "Old money lives in a flat with high ceilings and bad
+plumbing" is well written and performs badly. Rewrite it as something a person
+would say out loud, in quotes, in a place with a name.
+
+### Cities that work
+
+Pakistan first (Lahore, Karachi, Islamabad), then the diaspora hubs where the
+same audience lives (Dubai, London). Baku is written out and underperformed.
