@@ -2155,7 +2155,8 @@
     "post_id": "18141834394605792",
     "posted_at_utc": "2026-09-02 10:35:10",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-kids-01",
@@ -2211,10 +2212,11 @@
     "video": "videos/isb-kids-05.mp4",
     "scheduled_at": "2026-09-11 02:50",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18167593768475934",
+    "posted_at_utc": "2026-09-10 23:44:48",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "isb-kids-06",
