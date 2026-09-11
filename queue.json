@@ -2194,7 +2194,8 @@
     "post_id": "18089801708670798",
     "posted_at_utc": "2026-09-10 10:36:35",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "isb-kids-04",
@@ -2250,10 +2251,11 @@
     "video": "videos/isb-kids-08.mp4",
     "scheduled_at": "2026-09-12 02:50",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18228094450326123",
+    "posted_at_utc": "2026-09-11 22:16:13",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "lhr-spouse-01",
