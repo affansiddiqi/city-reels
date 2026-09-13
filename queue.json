@@ -2259,7 +2259,8 @@
     "post_id": "18228094450326123",
     "posted_at_utc": "2026-09-11 22:16:13",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "lhr-spouse-01",
@@ -2315,10 +2316,11 @@
     "video": "videos/lhr-spouse-05.mp4",
     "scheduled_at": "2026-09-13 18:50",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18486658132107817",
+    "posted_at_utc": "2026-09-13 17:14:57",
+    "error": null,
+    "attempts": 1
   },
   {
     "id": "lhr-spouse-06",
