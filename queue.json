@@ -2381,8 +2381,8 @@
     "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": "HTTP 400: {\"error\":{\"message\":\"You cannot access the app till you log in to www.facebook.com and follow the instructions given.\",\"type\":\"OAuthException\",\"code\":190,\"error_data\":\"{\\\"checkpoint_url\\\":\\\"https:\\\\\\/\\\\\\/www.facebook.com\\\"}\",\"error_subcode\":459,\"fbtrace_id\":\"AFtaUnXOFzwi7mSZ-EAzAu0\"}}",
-    "attempts": 1
+    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AoCkxmXvGMVT5LAOjVxE8ub\"}}",
+    "attempts": 2
   },
   {
     "id": "khi-spouse-03",
@@ -2390,10 +2390,11 @@
     "video": "videos/khi-spouse-03.mp4",
     "scheduled_at": "2026-09-15 18:50",
     "status": "approved",
-    "result": null,
+    "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": null
+    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AgkOTZ3Upqokmexkbhj9V3P\"}}",
+    "attempts": 1
   },
   {
     "id": "khi-spouse-04",
