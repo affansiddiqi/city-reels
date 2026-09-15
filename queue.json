@@ -2357,8 +2357,8 @@
     "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": "HTTP 400: {\"error\":{\"message\":\"You cannot access the app till you log in to www.facebook.com and follow the instructions given.\",\"type\":\"OAuthException\",\"code\":190,\"error_data\":\"{\\\"checkpoint_url\\\":\\\"https:\\\\\\/\\\\\\/www.facebook.com\\\"}\",\"error_subcode\":459,\"fbtrace_id\":\"AA5qQvf1nRZpc8FSVYwkzGi\"}}",
-    "attempts": 2
+    "error": "HTTP 400: {\"error\":{\"message\":\"You cannot access the app till you log in to www.facebook.com and follow the instructions given.\",\"type\":\"OAuthException\",\"code\":190,\"error_data\":\"{\\\"checkpoint_url\\\":\\\"https:\\\\\\/\\\\\\/www.facebook.com\\\"}\",\"error_subcode\":459,\"fbtrace_id\":\"ARUkgO5CK7vLxKE5BcDGN3w\"}}",
+    "attempts": 3
   },
   {
     "id": "khi-spouse-01",
@@ -2366,10 +2366,11 @@
     "video": "videos/khi-spouse-01.mp4",
     "scheduled_at": "2026-09-15 02:50",
     "status": "approved",
-    "result": null,
+    "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": null
+    "error": "HTTP 400: {\"error\":{\"message\":\"You cannot access the app till you log in to www.facebook.com and follow the instructions given.\",\"type\":\"OAuthException\",\"code\":190,\"error_data\":\"{\\\"checkpoint_url\\\":\\\"https:\\\\\\/\\\\\\/www.facebook.com\\\"}\",\"error_subcode\":459,\"fbtrace_id\":\"AxYCHS9nOPlpvdnf_IMoUCD\"}}",
+    "attempts": 1
   },
   {
     "id": "khi-spouse-02",
