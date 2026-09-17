@@ -2354,11 +2354,11 @@
     "video": "videos/lhr-spouse-08.mp4",
     "scheduled_at": "2026-09-18 00:50",
     "status": "approved",
-    "result": null,
+    "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": null,
-    "attempts": 0
+    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"Az7xKaOsEJWzISjgdzmqI3P\"}}",
+    "attempts": 1
   },
   {
     "id": "khi-spouse-01",
