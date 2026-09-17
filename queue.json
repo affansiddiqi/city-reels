@@ -2453,8 +2453,8 @@
     "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AR40qeZaOdxCJatKaUL1CLi\"}}",
-    "attempts": 1
+    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A_P5uFN4_0AFI6a31Wp_LyT\"}}",
+    "attempts": 2
   },
   {
     "id": "dxb-spouse-01",
@@ -2462,10 +2462,11 @@
     "video": "videos/dxb-spouse-01.mp4",
     "scheduled_at": "2026-09-17 18:50",
     "status": "approved",
-    "result": null,
+    "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": null
+    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AbwQCTxo56mwLzKn5j8XCTJ\"}}",
+    "attempts": 1
   },
   {
     "id": "dxb-spouse-02",
