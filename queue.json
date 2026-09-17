@@ -2453,8 +2453,8 @@
     "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A_P5uFN4_0AFI6a31Wp_LyT\"}}",
-    "attempts": 2
+    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AkPim-sJeDZE7VPbO2yzrU8\"}}",
+    "attempts": 3
   },
   {
     "id": "dxb-spouse-01",
@@ -2465,8 +2465,8 @@
     "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AbwQCTxo56mwLzKn5j8XCTJ\"}}",
-    "attempts": 1
+    "error": "HTTP 400: {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AL_CtKD2Nt-dVxqV_-fMAxJ\"}}",
+    "attempts": 2
   },
   {
     "id": "dxb-spouse-02",
