@@ -9,5 +9,7 @@
   "max_new_per_run": 6,
   "scrim": 0.2,
   "template": "templates/Template.MP4",
-  "max_attempts": 3
+  "max_attempts": 3,
+  "trial_reels": true,
+  "trial_graduation_strategy": "SS_PERFORMANCE"
 }

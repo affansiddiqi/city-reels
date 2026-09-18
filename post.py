@@ -47,6 +47,16 @@ KEEP_VIDEOS = int(os.environ.get("KEEP_VIDEOS", CONFIG.get("keep_posted_videos",
 PUBLIC_BASE = CONFIG["public_assets_base"].rstrip("/")
 TZNAME = CONFIG.get("timezone", "Asia/Karachi")
 
+# Trial reels are shown only to non-followers first; Instagram promotes the
+# ones that perform well to the normal public/follower feed on its own, and
+# quietly leaves the rest as trial-only. SS_PERFORMANCE requires zero manual
+# steps, which is what keeps this pipeline unattended -- MANUAL graduation
+# would mean opening the app for every single reel, defeating the automation.
+TRIAL_REELS = bool(os.environ.get("TRIAL_REELS", str(CONFIG.get("trial_reels", False))).lower()
+                    in ("1", "true", "yes"))
+TRIAL_GRADUATION = os.environ.get("TRIAL_GRADUATION_STRATEGY",
+                                   CONFIG.get("trial_graduation_strategy", "SS_PERFORMANCE"))
+
 GRAPH = "https://graph.facebook.com/v21.0"
 POLL_ATTEMPTS = 40
 POLL_DELAY = 5
@@ -98,13 +108,17 @@ def publish(item):
     """Create a Reel container, wait for Instagram to transcode it, publish."""
     video_url = PUBLIC_BASE + "/" + item["video"].lstrip("/")
 
-    container = post_form(GRAPH + "/%s/media" % IG_ACCOUNT_ID, {
+    payload = {
         "media_type": "REELS",
         "video_url": video_url,
         "caption": item.get("caption", ""),
         "share_to_feed": "true",
         "access_token": PAGE_TOKEN,
-    })
+    }
+    if TRIAL_REELS:
+        payload["trial_params"] = json.dumps({"graduation_strategy": TRIAL_GRADUATION})
+
+    container = post_form(GRAPH + "/%s/media" % IG_ACCOUNT_ID, payload)
     container_id = container["id"]
 
     for _ in range(POLL_ATTEMPTS):
@@ -164,6 +178,10 @@ def main():
         print("Instagram credentials not set. Nothing to do.")
         return
 
+    print("Trial reels: %s%s" % (
+        "ON (graduation: %s)" % TRIAL_GRADUATION if TRIAL_REELS else "OFF",
+        "" if TRIAL_REELS else " -- publishing normally to all followers"))
+
     queue = json.load(open(QUEUE_PATH))
     changed = auth_failed = False
     posted = skipped = 0
@@ -196,7 +214,7 @@ def main():
             media_id = publish(item)
             item.update({"result": "posted", "post_id": media_id,
                          "posted_at_utc": now_utc().strftime("%Y-%m-%d %H:%M:%S"),
-                         "error": None})
+                         "error": None, "trial_reel": TRIAL_REELS})
             posted += 1
             changed = True
             print("POSTED %s -> %s" % (item.get("id"), media_id))
