@@ -2372,11 +2372,12 @@
     "video": "videos/khi-spouse-01.mp4",
     "scheduled_at": "2026-09-18 08:50",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
+    "result": "posted",
+    "post_id": "18029844173888632",
+    "posted_at_utc": "2026-09-18 01:35:59",
     "error": null,
-    "attempts": 0
+    "attempts": 0,
+    "trial_reel": true
   },
   {
     "id": "khi-spouse-02",
