@@ -2298,7 +2298,8 @@
     "post_id": "17958428208198838",
     "posted_at_utc": "2026-09-12 23:44:07",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "lhr-spouse-04",
@@ -2310,7 +2311,8 @@
     "post_id": "18371079961215692",
     "posted_at_utc": "2026-09-13 13:38:47",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "lhr-spouse-05",
@@ -2322,7 +2324,8 @@
     "post_id": "18486658132107817",
     "posted_at_utc": "2026-09-13 17:14:57",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "lhr-spouse-06",
@@ -2334,7 +2337,8 @@
     "post_id": "18166625374462111",
     "posted_at_utc": "2026-09-13 22:52:41",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "lhr-spouse-07",
@@ -2346,7 +2350,8 @@
     "post_id": "18145665250560773",
     "posted_at_utc": "2026-09-14 11:44:58",
     "error": null,
-    "attempts": 1
+    "attempts": 1,
+    "video_deleted": true
   },
   {
     "id": "lhr-spouse-08",

@@ -4,7 +4,7 @@
   "scopes": "instagram_basic,instagram_content_publish,pages_show_list,pages_read_engagement",
   "timezone": "Asia/Karachi",
   "max_per_run": 1,
-  "keep_posted_videos": 5,
+  "keep_posted_videos": 0,
   "every_hours": 8,
   "max_new_per_run": 6,
   "scrim": 0.2,
