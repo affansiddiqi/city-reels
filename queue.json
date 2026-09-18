@@ -2377,7 +2377,8 @@
     "posted_at_utc": "2026-09-18 01:35:59",
     "error": null,
     "attempts": 0,
-    "trial_reel": true
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "khi-spouse-02",
