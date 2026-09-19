@@ -2414,11 +2414,13 @@
     "video": "videos/khi-spouse-04.mp4",
     "scheduled_at": "2026-09-19 08:50",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
+    "result": "posted",
+    "post_id": "17999330504808974",
+    "posted_at_utc": "2026-09-19 07:00:49",
     "error": null,
-    "attempts": 0
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "khi-spouse-05",
