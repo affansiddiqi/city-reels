@@ -2526,10 +2526,13 @@
     "video": "videos/dxb-spouse-04.mp4",
     "scheduled_at": "2026-09-22 00:50",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18074449091439718",
+    "posted_at_utc": "2026-09-21 21:43:40",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "dxb-spouse-05",
