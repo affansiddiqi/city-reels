@@ -2638,10 +2638,13 @@
     "video": "videos/ldn-spouse-04.mp4",
     "scheduled_at": "2026-09-24 16:50",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17921780958223100",
+    "posted_at_utc": "2026-09-24 13:11:04",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "ldn-spouse-05",
