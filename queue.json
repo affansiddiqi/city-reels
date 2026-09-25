@@ -4056,10 +4056,13 @@
     "video": "videos/isb-sumo-01.mp4",
     "scheduled_at": "2026-09-25 11:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17972487489152934",
+    "posted_at_utc": "2026-09-25 11:06:43",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "isb-cbtl-01",
