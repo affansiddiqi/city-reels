@@ -4076,10 +4076,13 @@
     "video": "videos/isb-cbtl-01.mp4",
     "scheduled_at": "2026-09-25 17:24",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17970559122168153",
+    "posted_at_utc": "2026-09-25 23:48:17",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "isb-street1-01",
