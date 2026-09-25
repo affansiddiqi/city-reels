@@ -4141,9 +4141,12 @@
     "video": "videos/isb-sip-01v2.mp4",
     "scheduled_at": "2026-09-25 09:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18066932561598570",
+    "posted_at_utc": "2026-09-25 10:42:22",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   }
 ]
