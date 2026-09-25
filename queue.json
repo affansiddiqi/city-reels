@@ -4042,10 +4042,13 @@
     "video": "videos/isb-fuoco-01.mp4",
     "scheduled_at": "2026-09-25 10:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17889409788458367",
+    "posted_at_utc": "2026-09-25 10:59:41",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "isb-sumo-01",
