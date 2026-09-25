@@ -8,8 +8,9 @@ wrapping, centring, soft shadow and inline emoji -- then overlaid with ffmpeg.
 That beats ffmpeg's own drawtext filter, which cannot wrap, auto-fit or do
 emoji.
 
-Layout defaults match the reference post: block anchored to the TOP of the
-frame (not vertically centred), title high, a wide gap, then the body.
+Layout defaults to vertically centring the whole title+body block within a
+safe band, clear of Instagram's top status bar and the bottom caption/action
+rail. Pass --title-top to opt back into fixed top-anchored placement.
 
 Usage:
     python3 render.py --template templates/baku-night.mp4 \
@@ -17,9 +18,9 @@ Usage:
         --body "$(cat tip1.txt)" --out videos/baku-01.mp4 --preview
 
 Tuning:
-    --title-top 0.135   title block start, as a fraction of frame height
-    --body-top 0.325    body block start
-    --body-end 0.70     body must finish above this
+    --title-top 0.135   opt OUT of centring: fixed title position (fraction)
+    --body-top 0.325    fixed body position, used with --title-top
+    --body-end 0.70     body must finish above this, used with --title-top
     --body-size 34      force a size (default: auto-fit to the space)
     --margin 115        side padding, px
     --style shadow      "shadow" (soft, IG-like) or "stroke" (hard outline)
@@ -37,10 +38,19 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 W, H = 1080, 1920
 FPS = 30
 
+# Default layout: the whole title+body block is vertically centred within this
+# safe band (clear of Instagram's top status bar and the caption/action-rail
+# at the bottom), not anchored to the top. Pass --title-top explicitly to fall
+# back to old fixed-position placement instead.
+SAFE_TOP = 0.14
+SAFE_BOTTOM = 0.80
+TITLE_GAP = 55
+MARGIN_X = 115
+
+# Kept only for the explicit-override code path (--title-top etc).
 TITLE_TOP = 0.135
 BODY_TOP = 0.325
 BODY_END = 0.70
-MARGIN_X = 115
 
 TITLE_MAX_SIZE, TITLE_MIN_SIZE = 58, 32
 BODY_MAX_SIZE, BODY_MIN_SIZE = 44, 22
@@ -238,23 +248,56 @@ def draw_block(img, draw, lines, f, top, stroke_w, stroke_fill):
 
 def render_overlay(title, body, out_png, opts):
     max_width = W - 2 * opts["margin"]
-    title_top = int(opts["title_top"] * H)
-    body_top = int(opts["body_top"] * H)
-    body_end = int(opts["body_end"] * H)
     hard = opts["style"] == "stroke"
 
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
 
-    title_f, title_lines, title_h = None, [], 0
-    if title.strip():
-        title_f, title_lines, title_h = fit_block(
-            draw, title, max_width, max(1, body_top - title_top - 20),
-            TITLE_MAX_SIZE, TITLE_MIN_SIZE, opts["title_size"])
+    if opts["title_top"] is not None:
+        # Explicit override: old fixed-position behaviour.
+        title_top = int(opts["title_top"] * H)
+        body_top = int((opts["body_top"] if opts["body_top"] is not None else BODY_TOP) * H)
+        body_end = int((opts["body_end"] if opts["body_end"] is not None else BODY_END) * H)
 
-    body_f, body_lines, body_h = fit_block(
-        draw, body, max_width, max(1, body_end - body_top),
-        BODY_MAX_SIZE, BODY_MIN_SIZE, opts["body_size"])
+        title_f, title_lines, title_h = None, [], 0
+        if title.strip():
+            title_f, title_lines, title_h = fit_block(
+                draw, title, max_width, max(1, body_top - title_top - 20),
+                TITLE_MAX_SIZE, TITLE_MIN_SIZE, opts["title_size"])
+
+        body_f, body_lines, body_h = fit_block(
+            draw, body, max_width, max(1, body_end - body_top),
+            BODY_MAX_SIZE, BODY_MIN_SIZE, opts["body_size"])
+    else:
+        # Default: centre the whole title+gap+body block within the safe band.
+        safe_top = int(SAFE_TOP * H)
+        safe_bottom = int(SAFE_BOTTOM * H)
+        avail = safe_bottom - safe_top
+
+        title_f, title_lines, title_h = None, [], 0
+        if title.strip():
+            title_f, title_lines, title_h = fit_block(
+                draw, title, max_width, int(avail * 0.35),
+                TITLE_MAX_SIZE, TITLE_MIN_SIZE, opts["title_size"])
+
+        gap = TITLE_GAP if title_h else 0
+        body_avail = avail - title_h - gap
+        body_f, body_lines, body_h = fit_block(
+            draw, body, max_width, max(1, body_avail),
+            BODY_MAX_SIZE, BODY_MIN_SIZE, opts["body_size"])
+
+        # Target genuine visual centre of the full frame, not just the safe
+        # band's own midpoint -- those differ once SAFE_TOP/SAFE_BOTTOM aren't
+        # symmetric around H/2. Only pull back off true-centre when the block
+        # is tall enough that centring it would overlap the top status bar or
+        # the bottom caption/action-rail; in that case it degrades to filling
+        # the safe band, same as before.
+        total = title_h + gap + body_h
+        ideal_top = H // 2 - total // 2
+        top_bound = safe_top
+        bottom_bound = safe_bottom - total
+        title_top = max(top_bound, min(ideal_top, bottom_bound))
+        body_top = title_top + title_h + gap
 
     if title_h:
         draw_block(img, draw, title_lines, title_f, title_top,
@@ -339,9 +382,11 @@ def main():
     ap.add_argument("--mute", action="store_true")
     ap.add_argument("--preview", action="store_true",
                     help="also write <out>.overlay.png and <out>.frame.png")
-    ap.add_argument("--title-top", type=float, default=TITLE_TOP)
-    ap.add_argument("--body-top", type=float, default=BODY_TOP)
-    ap.add_argument("--body-end", type=float, default=BODY_END)
+    ap.add_argument("--title-top", type=float, default=None,
+                    help="fixed position override (fraction of height); "
+                         "omit to vertically centre the block instead")
+    ap.add_argument("--body-top", type=float, default=None)
+    ap.add_argument("--body-end", type=float, default=None)
     ap.add_argument("--margin", type=int, default=MARGIN_X)
     ap.add_argument("--title-size", type=int, default=None)
     ap.add_argument("--body-size", type=int, default=None)
