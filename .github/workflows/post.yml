@@ -34,7 +34,7 @@ jobs:
       # Renders any script that has no video yet and schedules it, approved.
       - name: Top up the queue
         env:
-          EVERY_HOURS: "8"
+          EVERY_HOURS: "1"
           MAX_NEW_PER_RUN: "8"
         run: python3 replenish.py
 
