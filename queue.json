@@ -2750,10 +2750,13 @@
     "video": "videos/lhr-kids-04.mp4",
     "scheduled_at": "2026-09-25 19:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18141431134608818",
+    "posted_at_utc": "2026-09-26 09:05:14",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "lhr-kids-05",
