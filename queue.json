@@ -4212,9 +4212,12 @@
     "video": "videos/isb-rootsivy-01.mp4",
     "scheduled_at": "2026-09-25 21:03",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18094967951433288",
+    "posted_at_utc": "2026-09-26 15:29:33",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   }
 ]
