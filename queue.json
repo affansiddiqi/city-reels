@@ -2806,10 +2806,13 @@
     "video": "videos/lhr-kids-08.mp4",
     "scheduled_at": "2026-09-25 23:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18094564604657921",
+    "posted_at_utc": "2026-09-27 00:12:35",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "khi-kids-01",
