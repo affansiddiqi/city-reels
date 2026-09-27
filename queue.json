@@ -2820,10 +2820,13 @@
     "video": "videos/khi-kids-01.mp4",
     "scheduled_at": "2026-09-26 00:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17869948455648977",
+    "posted_at_utc": "2026-09-27 06:11:19",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "khi-kids-02",
