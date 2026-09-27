@@ -4136,10 +4136,13 @@
     "video": "videos/isb-brew-01.mp4",
     "scheduled_at": "2026-09-26 02:03",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18122738725914236",
+    "posted_at_utc": "2026-09-27 13:01:41",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "isb-playboy-01",
