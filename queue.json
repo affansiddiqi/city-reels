@@ -2834,10 +2834,13 @@
     "video": "videos/khi-kids-02.mp4",
     "scheduled_at": "2026-09-26 01:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17982376479108534",
+    "posted_at_utc": "2026-09-27 12:43:41",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "khi-kids-03",
