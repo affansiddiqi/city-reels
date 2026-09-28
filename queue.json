@@ -2918,10 +2918,13 @@
     "video": "videos/khi-kids-08.mp4",
     "scheduled_at": "2026-09-26 07:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17960099282999103",
+    "posted_at_utc": "2026-09-28 18:25:41",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "dxb-kids-01",
