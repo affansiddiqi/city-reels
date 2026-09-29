@@ -2974,10 +2974,13 @@
     "video": "videos/dxb-kids-04.mp4",
     "scheduled_at": "2026-09-26 11:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18626395246048132",
+    "posted_at_utc": "2026-09-29 17:36:07",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "dxb-kids-05",
