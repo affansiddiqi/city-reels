@@ -3030,10 +3030,13 @@
     "video": "videos/dxb-kids-08.mp4",
     "scheduled_at": "2026-09-26 15:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18105993119620279",
+    "posted_at_utc": "2026-09-30 14:36:45",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "ldn-kids-01",
