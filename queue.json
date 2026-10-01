@@ -3100,10 +3100,13 @@
     "video": "videos/ldn-kids-05.mp4",
     "scheduled_at": "2026-09-26 20:04",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18113315012275542",
+    "posted_at_utc": "2026-10-01 22:33:50",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "ldn-kids-06",
