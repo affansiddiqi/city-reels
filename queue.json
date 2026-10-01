@@ -4162,10 +4162,13 @@
     "video": "videos/isb-street1-01.mp4",
     "scheduled_at": "2026-09-26 17:24",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18018898085730640",
+    "posted_at_utc": "2026-10-01 04:01:54",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": true,
+    "video_deleted": true
   },
   {
     "id": "isb-coffeemistry-01",
