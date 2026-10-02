@@ -4404,10 +4404,13 @@
     "video": "videos/dha2-centralpark-01-t1.mp4",
     "scheduled_at": "2026-10-02 15:51",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18111743950875442",
+    "posted_at_utc": "2026-10-02 11:10:31",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "dha2-centralpark-01-t2",
