@@ -4421,10 +4421,13 @@
     "video": "videos/dha2-centralpark-01-t2.mp4",
     "scheduled_at": "2026-10-02 16:51",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18080117639378272",
+    "posted_at_utc": "2026-10-02 20:20:33",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "dha2-centralpark-01-t4",
