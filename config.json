@@ -10,6 +10,6 @@
   "scrim": 0.2,
   "template": "templates/meetpeople.MP4",
   "max_attempts": 3,
-  "trial_reels": true,
+  "trial_reels": false,
   "trial_graduation_strategy": "SS_PERFORMANCE"
 }
