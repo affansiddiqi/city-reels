@@ -19,6 +19,7 @@ Two guards worth knowing about:
 import datetime
 import json
 import os
+import random
 import subprocess
 import sys
 
@@ -39,8 +40,17 @@ EVERY_HOURS = float(os.environ.get("EVERY_HOURS", CONFIG.get("every_hours", 1)))
 MAX_NEW_PER_RUN = int(os.environ.get("MAX_NEW_PER_RUN",
                                      CONFIG.get("max_new_per_run", 6)))
 SCRIM = str(CONFIG.get("scrim", 0.2))
+# When a template_pool is configured, each reel gets a random template from
+# it instead of always the same clip -- keeps the grid from looking identical
+# video after video. Falls back to the single "template" key when no pool is
+# set, so existing configs keep working unchanged.
+TEMPLATE_POOL = [os.path.join(HERE, p) for p in CONFIG.get("template_pool", [])]
 TEMPLATE = os.path.join(HERE, CONFIG.get("template", "templates/Template.MP4"))
 MIN_VALID_BYTES = 100_000
+
+
+def pick_template():
+    return random.choice(TEMPLATE_POOL) if TEMPLATE_POOL else TEMPLATE
 
 
 def now_local():
@@ -83,7 +93,7 @@ def content_files():
 
 
 def render(tip, out_path):
-    cmd = [sys.executable, RENDER, "--template", TEMPLATE,
+    cmd = [sys.executable, RENDER, "--template", pick_template(),
            "--title", tip.get("title", ""), "--body", tip["body"],
            "--out", out_path, "--scrim", SCRIM]
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=900)

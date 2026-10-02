@@ -11,5 +11,11 @@
   "template": "templates/meetpeople.MP4",
   "max_attempts": 3,
   "trial_reels": false,
-  "trial_graduation_strategy": "SS_PERFORMANCE"
+  "trial_graduation_strategy": "SS_PERFORMANCE",
+  "template_pool": [
+    "templates/dha2-1.mp4",
+    "templates/dha2-2.mp4",
+    "templates/dha2-3.mp4",
+    "templates/dha2-4.mp4"
+  ]
 }
