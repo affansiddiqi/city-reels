@@ -4313,10 +4313,13 @@
     "video": "videos/dha2-centralpark-01.mp4",
     "scheduled_at": "2026-09-26 23:03",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18095173706413580",
+    "posted_at_utc": "2026-10-02 11:04:22",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "isb-brew-02",
