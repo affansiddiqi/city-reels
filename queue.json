@@ -4341,10 +4341,13 @@
     "video": "videos/isb-cbtl-02.mp4",
     "scheduled_at": "2026-10-02 16:56",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18125991424883635",
+    "posted_at_utc": "2026-10-03 00:09:11",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "isb-coffeemistry-02",
