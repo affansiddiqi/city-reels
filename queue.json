@@ -4438,9 +4438,12 @@
     "video": "videos/dha2-centralpark-01-t4.mp4",
     "scheduled_at": "2026-10-02 17:51",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18123284365933216",
+    "posted_at_utc": "2026-10-03 06:01:21",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   }
 ]
