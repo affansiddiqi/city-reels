@@ -4411,10 +4411,13 @@
     "video": "videos/isb-sumo-02.mp4",
     "scheduled_at": "2026-10-02 21:56",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17961298167232159",
+    "posted_at_utc": "2026-10-04 02:22:56",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "dha2-centralpark-01-t1",
