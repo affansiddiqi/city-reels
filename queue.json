@@ -4467,10 +4467,13 @@
     "video": "videos/rf2-guy-01.mp4",
     "scheduled_at": "2026-10-20 23:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17996336010019643",
+    "posted_at_utc": "2026-10-20 18:14:51",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-girl-01",
