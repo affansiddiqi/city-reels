@@ -4537,10 +4537,13 @@
     "video": "videos/rf2-texting-01.mp4",
     "scheduled_at": "2026-10-21 19:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18339695878256442",
+    "posted_at_utc": "2026-10-21 22:05:35",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-support-01",
