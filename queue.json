@@ -4495,10 +4495,13 @@
     "video": "videos/rf2-rishta-01.mp4",
     "scheduled_at": "2026-10-21 07:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18105833612570889",
+    "posted_at_utc": "2026-10-21 07:02:52",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-maybezone-01",
