@@ -4481,10 +4481,13 @@
     "video": "videos/rf2-girl-01.mp4",
     "scheduled_at": "2026-10-21 03:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17953106574272265",
+    "posted_at_utc": "2026-10-21 01:16:27",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-rishta-01",
