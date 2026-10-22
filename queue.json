@@ -4551,10 +4551,13 @@
     "video": "videos/rf2-support-01.mp4",
     "scheduled_at": "2026-10-21 23:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18100285430641800",
+    "posted_at_utc": "2026-10-22 01:12:33",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-playboy-01",
