@@ -4761,10 +4761,13 @@
     "video": "videos/rf2-instagram-02.mp4",
     "scheduled_at": "2026-10-24 11:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18114203482870136",
+    "posted_at_utc": "2026-10-24 20:12:03",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-taxi-02",
