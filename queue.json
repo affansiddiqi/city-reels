@@ -4873,10 +4873,13 @@
     "video": "videos/rf2-maybezone-03.mp4",
     "scheduled_at": "2026-10-25 19:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18024508616717980",
+    "posted_at_utc": "2026-10-25 23:48:11",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-firstdate-03",
