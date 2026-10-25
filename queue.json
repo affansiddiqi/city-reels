@@ -4789,10 +4789,13 @@
     "video": "videos/rf2-committee-02.mp4",
     "scheduled_at": "2026-10-24 19:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18147745360604287",
+    "posted_at_utc": "2026-10-25 00:49:09",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-spiritual-02",
