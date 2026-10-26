@@ -4929,10 +4929,13 @@
     "video": "videos/rf2-playboy-03.mp4",
     "scheduled_at": "2026-10-26 11:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18098752373106769",
+    "posted_at_utc": "2026-10-26 21:21:07",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-instagram-03",
