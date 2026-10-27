@@ -4957,10 +4957,13 @@
     "video": "videos/rf2-taxi-03.mp4",
     "scheduled_at": "2026-10-26 19:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18126666523927794",
+    "posted_at_utc": "2026-10-27 07:16:33",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-committee-03",
