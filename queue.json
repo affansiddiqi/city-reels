@@ -5055,10 +5055,13 @@
     "video": "videos/rf2-maybezone-04.mp4",
     "scheduled_at": "2026-10-27 23:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18146505016503414",
+    "posted_at_utc": "2026-10-28 21:35:30",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-firstdate-04",
