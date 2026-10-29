@@ -5083,10 +5083,13 @@
     "video": "videos/rf2-texting-04.mp4",
     "scheduled_at": "2026-10-28 07:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18049416866815409",
+    "posted_at_utc": "2026-10-29 08:00:40",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-support-04",
