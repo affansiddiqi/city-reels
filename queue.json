@@ -5181,10 +5181,13 @@
     "video": "videos/rf2-profile-04.mp4",
     "scheduled_at": "2026-10-29 11:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18009026397006788",
+    "posted_at_utc": "2026-10-30 22:52:54",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-guy-05",
