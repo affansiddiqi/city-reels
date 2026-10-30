@@ -5139,10 +5139,13 @@
     "video": "videos/rf2-taxi-04.mp4",
     "scheduled_at": "2026-10-28 23:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18129141185476385",
+    "posted_at_utc": "2026-10-30 06:47:09",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-committee-04",
