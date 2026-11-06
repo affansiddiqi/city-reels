@@ -5531,10 +5531,13 @@
     "video": "videos/rf2-spiritual-06.mp4",
     "scheduled_at": "2026-11-02 15:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17898412605415776",
+    "posted_at_utc": "2026-11-06 11:48:36",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-profile-06",
