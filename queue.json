@@ -5671,10 +5671,13 @@
     "video": "videos/rf2-instagram-07.mp4",
     "scheduled_at": "2026-11-04 07:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18093795833288557",
+    "posted_at_utc": "2026-11-08 20:09:52",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-taxi-07",
