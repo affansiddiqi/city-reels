@@ -5797,10 +5797,13 @@
     "video": "videos/rf2-firstdate-08.mp4",
     "scheduled_at": "2026-11-05 19:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18186128722425088",
+    "posted_at_utc": "2026-11-11 18:21:28",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-texting-08",
