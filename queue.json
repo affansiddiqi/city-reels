@@ -5839,10 +5839,13 @@
     "video": "videos/rf2-playboy-08.mp4",
     "scheduled_at": "2026-11-06 07:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18172923334497288",
+    "posted_at_utc": "2026-11-12 17:55:19",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-instagram-08",
