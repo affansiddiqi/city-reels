@@ -5993,10 +5993,11 @@
     "video": "videos/rf2-texting-09.mp4",
     "scheduled_at": "2026-11-08 03:09",
     "status": "approved",
-    "result": null,
+    "result": "failed",
     "post_id": null,
     "posted_at_utc": null,
-    "error": null
+    "error": "Instagram could not process the video: {'id': '18100766486451523', 'status': 'Error: Media upload has failed with error code 2207077', 'status_code': 'ERROR'}",
+    "attempts": 1
   },
   {
     "id": "rf2-support-09",
@@ -6004,10 +6005,13 @@
     "video": "videos/rf2-support-09.mp4",
     "scheduled_at": "2026-11-08 07:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17892006630687739",
+    "posted_at_utc": "2026-11-15 15:18:30",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-playboy-09",
