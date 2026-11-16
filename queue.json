@@ -6035,10 +6035,13 @@
     "video": "videos/rf2-instagram-09.mp4",
     "scheduled_at": "2026-11-08 15:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18154828927552493",
+    "posted_at_utc": "2026-11-16 07:38:19",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-taxi-09",
