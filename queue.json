@@ -6049,10 +6049,13 @@
     "video": "videos/rf2-taxi-09.mp4",
     "scheduled_at": "2026-11-08 19:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18092360699694299",
+    "posted_at_utc": "2026-11-16 17:54:51",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-committee-09",
