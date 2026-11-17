@@ -6077,10 +6077,13 @@
     "video": "videos/rf2-spiritual-09.mp4",
     "scheduled_at": "2026-11-09 03:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17894164071618771",
+    "posted_at_utc": "2026-11-17 10:08:23",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-profile-09",
