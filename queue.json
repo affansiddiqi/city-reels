@@ -6119,10 +6119,13 @@
     "video": "videos/rf2-girl-10.mp4",
     "scheduled_at": "2026-11-09 15:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "17928475821199718",
+    "posted_at_utc": "2026-11-18 11:05:00",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-rishta-10",
