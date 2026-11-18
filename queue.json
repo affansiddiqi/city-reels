@@ -6133,10 +6133,13 @@
     "video": "videos/rf2-rishta-10.mp4",
     "scheduled_at": "2026-11-09 19:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18100719701662181",
+    "posted_at_utc": "2026-11-18 19:56:56",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-maybezone-10",
