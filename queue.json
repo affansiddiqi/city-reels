@@ -6105,10 +6105,13 @@
     "video": "videos/rf2-guy-10.mp4",
     "scheduled_at": "2026-11-09 11:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18129704758807023",
+    "posted_at_utc": "2026-11-18 02:04:40",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-girl-10",
