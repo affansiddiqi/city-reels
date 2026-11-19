@@ -6161,10 +6161,13 @@
     "video": "videos/rf2-firstdate-10.mp4",
     "scheduled_at": "2026-11-10 03:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18115322342264515",
+    "posted_at_utc": "2026-11-19 09:51:59",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-texting-10",
