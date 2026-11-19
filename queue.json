@@ -6147,10 +6147,13 @@
     "video": "videos/rf2-maybezone-10.mp4",
     "scheduled_at": "2026-11-09 23:09",
     "status": "approved",
-    "result": null,
-    "post_id": null,
-    "posted_at_utc": null,
-    "error": null
+    "result": "posted",
+    "post_id": "18110381249192689",
+    "posted_at_utc": "2026-11-19 01:44:11",
+    "error": null,
+    "attempts": 1,
+    "trial_reel": false,
+    "video_deleted": true
   },
   {
     "id": "rf2-firstdate-10",
